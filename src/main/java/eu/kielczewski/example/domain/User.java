@@ -1,7 +1,6 @@
 package eu.kielczewski.example.domain;
 
 import com.google.common.base.Objects;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,7 +22,7 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    User() {
+    private User() {
     }
 
     public User(final String id, final String password) {

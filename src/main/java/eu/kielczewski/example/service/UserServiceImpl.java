@@ -1,7 +1,6 @@
 package eu.kielczewski.example.service;
 
 import eu.kielczewski.example.domain.User;
-import eu.kielczewski.example.domain.UserCreateForm;
 import eu.kielczewski.example.repository.UserRepository;
 import eu.kielczewski.example.service.exception.UserAlreadyExistsException;
 import org.slf4j.Logger;
