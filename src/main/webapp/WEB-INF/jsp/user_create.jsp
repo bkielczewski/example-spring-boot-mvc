@@ -3,8 +3,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <body>
-    <h1>Create user</h1>
-    <a href="<spring:url value="/user_list.html" />"><spring:message code="user.create.back" /></a>
+    <h1><spring:message code="user.create" /></h1>
+    <a href="<spring:url value="/user_list.html" />"><spring:message code="user.list" /></a>
     <form:form method="POST" action="/user_create.html" modelAttribute="form">
         <form:errors path="" element="div" />
         <div>
