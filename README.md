@@ -1,7 +1,7 @@
 Example Spring Boot MVC Application
 ===================================
 
-The article: in progress
+The article: [http://kielczewski.eu/2014/04/spring-boot-mvc-application/](http://kielczewski.eu/2014/04/spring-boot-mvc-application/)
 
 Also check out: [http://kielczewski.eu/2014/04/developing-restful-web-service-with-spring-boot/](http://kielczewski.eu/2014/04/developing-restful-web-service-with-spring-boot/)
 
