@@ -41,6 +41,7 @@ public class UserCreateControllerTest {
         ModelAndView view  = userController.getCreateUserView();
         assertEquals("View name should be right", "user_create", view.getViewName());
         assertTrue("View should contain attribute with form object", view.getModel().containsKey("form"));
+        assertTrue("The form object should be of proper type", view.getModel().get("form") instanceof UserCreateForm);
     }
 
     @Test
