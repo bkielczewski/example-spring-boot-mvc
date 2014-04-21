@@ -2,10 +2,9 @@ package eu.kielczewski.example.controller;
 
 import eu.kielczewski.example.domain.User;
 import eu.kielczewski.example.domain.UserCreateForm;
-import eu.kielczewski.example.validator.UserCreateFormPasswordValidator;
 import eu.kielczewski.example.service.UserService;
 import eu.kielczewski.example.service.exception.UserAlreadyExistsException;
-import eu.kielczewski.example.util.UserUtil;
+import eu.kielczewski.example.validator.UserCreateFormPasswordValidator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -62,9 +61,8 @@ public class UserCreateControllerTest {
     @Test
     public void shouldCreateUser_GivenThereAreFormErrors_ThenTheFormShouldBeDisplayed() {
         when(result.hasErrors()).thenReturn(true);
-        User user = UserUtil.createUser();
         String view = userController.createUser(new UserCreateForm(), result);
-        verify(userService, never()).save(user);
+        verify(userService, never()).save(any(User.class));
         assertEquals("View name should be right", "user_create", view);
     }
 
