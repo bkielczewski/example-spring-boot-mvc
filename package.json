@@ -1,0 +1,13 @@
+{
+    "name": "example-spring-boot-mvc",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt-contrib-clean": "~0.4.0",
+        "grunt-bower-task": "~0.3.0",
+        "grunt-contrib-uglify": "~0.4.0",
+        "grunt-contrib-less": "~0.10.0",
+        "grunt-contrib-copy": "~0.4.0",
+        "grunt-cli": "~0.1.13",
+        "grunt": "~0.4.0"
+    }
+}

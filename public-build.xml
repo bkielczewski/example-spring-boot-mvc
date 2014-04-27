@@ -1,0 +1,37 @@
+<project name="public-build" default="build">
+
+    <target name="build">
+        <echo>NPM is installing dependencies</echo>
+
+        <!-- npm install -->
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg line="/c npm install"/>
+        </exec>
+        <exec executable="npm" osfamily="unix" failonerror="true">
+            <arg line="install"/>
+        </exec>
+
+        <echo>Grunt is executing tasks</echo>
+
+        <!-- grunt -->
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg line="/c .\node_modules\.bin\grunt --no-color"/>
+        </exec>
+        <exec executable="./node_modules/.bin/grunt" osfamily="unix" failonerror="true">
+            <arg line="--no-color"/>
+        </exec>
+    </target>
+
+    <target name="clean">
+        <echo>Grunt is cleaning up...</echo>
+
+        <!-- grunt clean -->
+        <exec executable="cmd" osfamily="windows" failonerror="true">
+            <arg line="/c .\node_modules\.bin\grunt --no-color clean"/>
+        </exec>
+        <exec executable="./node_modules/.bin/grunt" osfamily="unix" failonerror="true">
+            <arg line="--no-color clean"/>
+        </exec>
+    </target>
+
+</project>
